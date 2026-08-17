@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | DreamKey Properties</title>
+    <meta
+      name="description"
+      content="Browse DreamKey Properties residential projects by category, location, configuration and price."
+    />
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/projects.css" />
+
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/projects.js" defer></script>
+  </head>
+
+  <body class="projects-page">
+    <!-- ==================================================
+     HEADER SECTION STARTED
+================================================== -->
+    <header class="header" data-header>
+      <div class="container header-container">
+        <!-- NAVBAR LOGO STARTED -->
+        <a
+          href="#hero"
+          class="navbar-brand"
+          aria-label="DreamKey Properties home"
+        >
+          <img
+            src="./assets/images/logo/logo.webp"
+            width="52"
+            height="64"
+            alt=""
+            class="navbar-brand-logo"
+          />
+
+          <span class="navbar-brand-text">
+            <strong>DREAMKEY</strong>
+            <span>PROPERTIES</span>
+          </span>
+        </a>
+        <!-- NAVBAR LOGO ENDED -->
+
+        <!-- MAIN NAVIGATION STARTED -->
+        <nav class="navbar" aria-label="Primary navigation" data-navbar>
+          <!-- NAVBAR MENU STARTED -->
+          <ul class="navbar-list">
+            <!-- PROJECTS -->
+            <li>
+              <a href="#projects" class="navbar-link active">Projects</a>
+            </li>
+
+            <!-- WHY DREAMKEY -->
+            <li>
+              <a href="#why-us" class="navbar-link">Why DreamKey</a>
+            </li>
+
+            <!-- PROPERTY ASSISTANCE -->
+            <!-- <li>
+              <a href="#property-assistance" class="navbar-link">
+                Property Assistance
+              </a>
+            </li> -->
+          </ul>
+          <!-- NAVBAR MENU ENDED -->
+
+          <!-- CTA BUTTON STARTED -->
+          <a href="#property-assistance" class="navbar-cta">
+            <span>Get Expert Advice</span>
+
+            <span class="material-symbols-rounded" aria-hidden="true">
+              arrow_outward
+            </span>
+          </a>
+          <!-- CTA BUTTON ENDED -->
+        </nav>
+        <!-- MAIN NAVIGATION ENDED -->
+
+        <!-- Mobile Navigation Button -->
+        <button
+          type="button"
+          class="nav-toggle-btn icon-btn"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          data-nav-toggler
+        >
+          <span class="material-symbols-rounded open" aria-hidden="true">
+            menu
+          </span>
+
+          <span class="material-symbols-rounded close" aria-hidden="true">
+            close
+          </span>
+        </button>
+      </div>
+    </header>
+    <!-- ==================================================
+     HEADER SECTION ENDED
+================================================== -->
+
+    <main>
+      <!-- ==================================================
+     PROJECT SEARCH SECTION STARTED
+================================================== -->
+      <section
+        class="projects-hero"
+        aria-labelledby="projects-page-title"
+        id="hero"
+      >
+        <div class="container projects-hero-container">
+          <nav class="projects-breadcrumb" aria-label="Breadcrumb">
+            <a href="./index.html#hero">Home</a>
+            <span>/</span>
+            <span data-projects-breadcrumb>Featured Projects</span>
+          </nav>
+
+          <span class="projects-eyebrow" data-projects-eyebrow
+            >Residential Projects</span
+          >
+          <h1 id="projects-page-title" data-projects-title>All Projects</h1>
+          <p data-projects-description>
+            Explore verified residential developments across Mumbai’s prime
+            locations.
+          </p>
+        </div>
+      </section>
+      <!-- ==================================================
+     PROJECT SEARCH SECTION ENDED
+================================================== -->
+
+      <!-- ==================================================
+     PROJECT PROPERTY SECTION STARTED
+================================================== -->
+      <section
+        class="projects-listing-section"
+        aria-label="Project listings"
+        id="projects"
+      >
+        <div class="container projects-listing-container">
+          <div class="projects-toolbar">
+            <div
+              class="projects-category-tabs"
+              aria-label="Filter projects by category"
+            >
+              <a
+                href="./projects.html?category=featured"
+                data-category-tab="featured"
+                >Featured</a
+              >
+              <a
+                href="./projects.html?category=ongoing"
+                data-category-tab="ongoing"
+                >Ongoing</a
+              >
+              <a
+                href="./projects.html?category=ready-to-move"
+                data-category-tab="ready-to-move"
+                >Ready to Move</a
+              >
+              <a
+                href="./projects.html?category=new-launches"
+                data-category-tab="new-launches"
+                >New Launches</a
+              >
+              <a
+                href="./projects.html?category=luxury-homes"
+                data-category-tab="luxury-homes"
+                >Luxury Homes</a
+              >
+            </div>
+
+            <div class="projects-toolbar-right">
+              <label class="projects-search">
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >search</span
+                >
+                <input
+                  type="search"
+                  placeholder="Search projects or locations"
+                  aria-label="Search projects"
+                  data-project-search
+                />
+              </label>
+
+              <label class="projects-sort">
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >swap_vert</span
+                >
+                <select aria-label="Sort projects" data-project-sort>
+                  <option value="default">Recommended</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name">Project Name</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <!-- ==================================================
+               ACTIVE SEARCH FILTERS STARTED
+          ================================================== -->
+          <div class="projects-active-filters" data-active-filters hidden>
+            <div class="projects-active-filters-left">
+              <span class="projects-active-filters-label">
+                Applied Filters:
+              </span>
+
+              <div
+                class="projects-filter-chips"
+                data-filter-chips
+                aria-label="Applied property filters"
+              ></div>
+            </div>
+
+            <a
+              href="./projects.html"
+              class="projects-clear-filters"
+              aria-label="Clear all property filters"
+            >
+              <span>Clear Filters</span>
+
+              <span class="material-symbols-rounded" aria-hidden="true">
+                restart_alt
+              </span>
+            </a>
+          </div>
+          <!-- ==================================================
+               ACTIVE SEARCH FILTERS ENDED
+          ================================================== -->
+
+          <div class="projects-results-header">
+            <!-- PROJECT COUNT STARTED -->
+            <div class="projects-results-count">
+              <span data-project-count>0</span>
+              <span data-project-count-label>projects found</span>
+            </div>
+            <!-- PROJECT COUNT ENDED -->
+
+            <!-- PROJECT NAVIGATION STARTED -->
+            <div class="projects-results-navigation">
+              <a
+                href="./index.html#featured-projects"
+                class="projects-back-link"
+                data-projects-back-link
+              >
+                <span data-projects-back-text>Back to Featured Projects</span>
+
+                <span class="material-symbols-rounded" aria-hidden="true">
+                  arrow_outward
+                </span>
+              </a>
+
+              <div
+                class="projects-slider-controls"
+                aria-label="Project navigation"
+              >
+                <button
+                  type="button"
+                  class="projects-slider-btn"
+                  data-projects-prev
+                  aria-label="Previous projects"
+                  disabled
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    arrow_back
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  class="projects-slider-btn"
+                  data-projects-next
+                  aria-label="Next projects"
+                >
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </button>
+              </div>
+            </div>
+            <!-- PROJECT NAVIGATION ENDED -->
+          </div>
+
+          <div class="projects-slider-viewport">
+            <div class="projects-grid" data-projects-grid></div>
+          </div>
+
+          <div class="projects-empty" data-projects-empty hidden>
+            <span
+              class="material-symbols-rounded projects-empty-icon"
+              aria-hidden="true"
+            >
+              search_off
+            </span>
+
+            <h2>No matching projects found</h2>
+
+            <p>
+              We couldn't find a property matching all of your selected
+              preferences. Try removing one or more filters, or view all
+              available projects.
+            </p>
+
+            <a href="./projects.html" class="projects-empty-button">
+              <span>Show All Projects</span>
+
+              <span class="material-symbols-rounded" aria-hidden="true">
+                arrow_forward
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+     PROJECT PROPERTY SECTION ENDED
+================================================== -->
+
+      <!-- ==================================================
+     WHY CHOOSE DREAMKEY SECTION STARTED
+================================================== -->
+      <section
+        id="why-us"
+        class="projects-why-section"
+        aria-labelledby="projects-why-title"
+      >
+        <!-- DECORATIVE BACKGROUND STARTED -->
+        <span
+          class="projects-why-pattern projects-why-pattern-top"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          class="projects-why-pattern projects-why-pattern-bottom"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          class="projects-why-shape projects-why-shape-left"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          class="projects-why-shape projects-why-shape-right"
+          aria-hidden="true"
+        ></span>
+        <!-- DECORATIVE BACKGROUND ENDED -->
+
+        <div class="container projects-why-container">
+          <!-- SECTION HEADING STARTED -->
+          <div class="projects-why-heading" data-reveal>
+            <div class="projects-why-eyebrow">
+              <span aria-hidden="true"></span>
+              <strong>Why DreamKey</strong>
+            </div>
+
+            <h2 id="projects-why-title">
+              Property decisions made
+              <span>clear and confident</span>
+            </h2>
+
+            <p>
+              From verified listings to personalised guidance, we help you move
+              forward with trusted information at every stage.
+            </p>
+          </div>
+          <!-- SECTION HEADING ENDED -->
+
+          <!-- WHY DREAMKEY CARDS STARTED -->
+          <div class="projects-why-grid">
+            <!-- CARD 01 STARTED -->
+            <article class="projects-why-card" data-reveal>
+              <div class="projects-why-card-icon-wrap">
+                <span class="projects-why-card-icon">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    verified
+                  </span>
+                </span>
+
+                <span class="projects-why-icon-curve" aria-hidden="true"></span>
+
+                <span class="projects-why-icon-dot" aria-hidden="true"></span>
+              </div>
+
+              <div class="projects-why-card-content">
+                <h3>Verified Projects</h3>
+
+                <p>
+                  Carefully reviewed developments with clear project information
+                  and approval details.
+                </p>
+              </div>
+
+              <span class="projects-why-card-line" aria-hidden="true">
+                <span></span>
+              </span>
+            </article>
+            <!-- CARD 01 ENDED -->
+
+            <!-- CARD 02 STARTED -->
+            <article class="projects-why-card" data-reveal>
+              <div class="projects-why-card-icon-wrap">
+                <span class="projects-why-card-icon">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    real_estate_agent
+                  </span>
+                </span>
+
+                <span class="projects-why-icon-curve" aria-hidden="true"></span>
+
+                <span class="projects-why-icon-dot" aria-hidden="true"></span>
+              </div>
+
+              <div class="projects-why-card-content">
+                <h3>Local Expertise</h3>
+
+                <p>
+                  Practical guidance based on Mumbai’s locations, pricing and
+                  real estate trends.
+                </p>
+              </div>
+
+              <span class="projects-why-card-line" aria-hidden="true">
+                <span></span>
+              </span>
+            </article>
+            <!-- CARD 02 ENDED -->
+
+            <!-- CARD 03 STARTED -->
+            <article class="projects-why-card" data-reveal>
+              <div class="projects-why-card-icon-wrap">
+                <span class="projects-why-card-icon">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    tune
+                  </span>
+                </span>
+
+                <span class="projects-why-icon-curve" aria-hidden="true"></span>
+
+                <span class="projects-why-icon-dot" aria-hidden="true"></span>
+              </div>
+
+              <div class="projects-why-card-content">
+                <h3>Personalised Shortlisting</h3>
+
+                <p>
+                  Recommendations matched to your budget, lifestyle and
+                  preferred location.
+                </p>
+              </div>
+
+              <span class="projects-why-card-line" aria-hidden="true">
+                <span></span>
+              </span>
+            </article>
+            <!-- CARD 03 ENDED -->
+
+            <!-- CARD 04 STARTED -->
+            <article class="projects-why-card" data-reveal>
+              <div class="projects-why-card-icon-wrap">
+                <span class="projects-why-card-icon">
+                  <span class="material-symbols-rounded" aria-hidden="true">
+                    support_agent
+                  </span>
+                </span>
+
+                <span class="projects-why-icon-curve" aria-hidden="true"></span>
+
+                <span class="projects-why-icon-dot" aria-hidden="true"></span>
+              </div>
+
+              <div class="projects-why-card-content">
+                <h3>End-to-End Support</h3>
+
+                <p>
+                  Assistance from initial discovery to site visits and final
+                  property selection.
+                </p>
+              </div>
+
+              <span class="projects-why-card-line" aria-hidden="true">
+                <span></span>
+              </span>
+            </article>
+            <!-- CARD 04 ENDED -->
+          </div>
+          <!-- WHY DREAMKEY CARDS ENDED -->
+        </div>
+      </section>
+      <!-- ==================================================
+     WHY CHOOSE DREAMKEY SECTION ENDED
+================================================== -->
+
+      <!-- ==================================================
+     PROJECT ENQUIRY CTA SECTION STARTED
+================================================== -->
+
+      <section
+        class="projects-enquiry-section"
+        id="property-assistance"
+        aria-labelledby="projects-enquiry-title"
+      >
+        <div class="container">
+          <div class="projects-enquiry-card">
+            <div class="projects-enquiry-content">
+              <span class="projects-enquiry-eyebrow"
+                >Personal Property Assistance</span
+              >
+              <h2 id="projects-enquiry-title">
+                Still looking for the right property?
+              </h2>
+              <p>
+                Share your preferred location, budget and configuration. Our
+                property advisors will help you shortlist suitable options.
+              </p>
+
+              <div class="projects-enquiry-actions">
+                <a href="./index.html#contact" class="projects-enquiry-primary">
+                  <span>Send Enquiry</span>
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >arrow_outward</span
+                  >
+                </a>
+
+                <a href="tel:+919876543210" class="projects-enquiry-secondary">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >call</span
+                  >
+                  <span>Call Property Advisor</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="projects-enquiry-details" aria-label="Enquiry benefits">
+              <div>
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >schedule</span
+                >
+                <p>
+                  <strong>Quick response</strong
+                  ><span>Connect with an advisor promptly</span>
+                </p>
+              </div>
+              <div>
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >payments</span
+                >
+                <p>
+                  <strong>Budget-based options</strong
+                  ><span>Receive relevant project matches</span>
+                </p>
+              </div>
+              <div>
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >calendar_month</span
+                >
+                <p>
+                  <strong>Site visit support</strong
+                  ><span>Plan visits at a convenient time</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================================================
+     PROJECT ENQUIRY CTA SECTION ENDED
+================================================== -->
+    </main>
+
+    <!-- ==================================================
+     FOOTER SECTION STARTED
+================================================== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <!-- FOOTER BRAND AREA STARTED -->
+        <div class="footer-brand">
+          <a
+            href="#hero"
+            class="footer-logo"
+            aria-label="DreamKey Properties home"
+          >
+            <img
+              src="./assets/images/logo/logo.webp"
+              width="80"
+              height="80"
+              loading="lazy"
+              alt="DreamKey Properties logo"
+            />
+
+            <span class="footer-logo-text">
+              <strong>DREAMKEY</strong>
+              <small>PROPERTIES</small>
+            </span>
+          </a>
+
+          <p class="footer-text">
+            DreamKey Properties helps buyers explore verified properties with
+            transparent information, expert guidance and reliable support
+            throughout their property journey.
+          </p>
+        </div>
+        <!-- FOOTER BRAND AREA ENDED -->
+
+        <!-- FOOTER EXPLORE LINKS STARTED -->
+        <div class="footer-column">
+          <h3>Explore</h3>
+
+          <ul>
+            <li><a href="./index.html#about">About DreamKey</a></li>
+            <li><a href="./index.html#why-us">Why Choose DreamKey</a></li>
+            <li><a href="./index.html#our-services">Our Services</a></li>
+            <li><a href="./index.html#buying-process">Buying Process</a></li>
+          </ul>
+        </div>
+        <!-- FOOTER EXPLORE LINKS ENDED -->
+
+        <!-- FOOTER PROJECT LINKS STARTED -->
+        <div class="footer-column">
+          <h3>Projects</h3>
+
+          <ul>
+            <li>
+              <a href="./index.html#featured-projects">Featured Projects</a>
+            </li>
+            <li>
+              <a href="./index.html#ongoing-projects">Under Construction</a>
+            </li>
+            <li>
+              <a href="./index.html#ready-to-move-projects">Ready-to-Move</a>
+            </li>
+            <li><a href="./index.html#new-launches">New Launches</a></li>
+            <li><a href="./index.html#luxury-homes">Luxury Homes</a></li>
+          </ul>
+        </div>
+        <!-- FOOTER PROJECT LINKS ENDED -->
+
+        <!-- FOOTER CONTACT AREA STARTED -->
+        <div class="footer-column footer-contact">
+          <h3>Reach Us</h3>
+
+          <p>
+            Need help choosing the right property? Our experts are ready to
+            guide you with suitable options and clear information.
+          </p>
+
+          <a href="mailto:contact@dreamkeyproperties.com">
+            contact@dreamkeyproperties.com
+          </a>
+
+          <div class="footer-social-list">
+            <a
+              href="https://www.facebook.com/"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true">
+                thumb_up
+              </span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true">
+                photo_camera
+              </span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true">
+                play_circle
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- FOOTER CONTACT AREA ENDED -->
+      </div>
+
+      <!-- FOOTER BOTTOM AREA STARTED -->
+      <div class="container footer-bottom">
+        <p>Copyright 2026 DreamKey Properties. All Rights Reserved.</p>
+
+        <ul>
+          <li>
+            <a href="./privacy-policy.html">Privacy Policy</a>
+          </li>
+
+          <li>
+            <span>•</span>
+          </li>
+
+          <li>
+            <a href="./terms-and-conditions.html"> Terms &amp; Conditions </a>
+          </li>
+
+          <li>
+            <span>•</span>
+          </li>
+
+          <li>
+            <a href="./sitemap.html">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+      <!-- FOOTER BOTTOM AREA ENDED -->
+    </footer>
+    <!-- ==================================================
+     FOOTER SECTION ENDED
+================================================== -->
+  </body>
+</html>
