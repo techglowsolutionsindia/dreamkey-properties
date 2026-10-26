@@ -8471,14 +8471,7 @@ body:has(.policy-page) .navbar-link.active {
     border: 1px solid rgba(36, 124, 255, 0.12) !important;
     border-radius: 20px !important;
 
-    background:
-      radial-gradient(
-        circle at 92% 8%,
-        rgba(36, 124, 255, 0.14),
-        transparent 34%
-      ),
-      linear-gradient(135deg, #ffffff 0%, #f3f8ff 100%) !important;
-
+    background: transparent !important;
     box-shadow: 0 18px 42px rgba(7, 42, 88, 0.09) !important;
 
     display: flex !important;
@@ -8704,6 +8697,7 @@ body:has(.policy-page) .navbar-link.active {
   /* Banner must exactly match the card height */
   #luxury-homes .luxury-homes-banner {
     position: relative !important;
+
     width: 100% !important;
     height: 478px !important;
     min-height: 0 !important;
@@ -13669,6 +13663,91 @@ body.our-services-modal-open {
 
 /* ==================================================
    MOBILE NAVIGATION RESPONSIVE FIX ENDED
+================================================== */
+
+/* ==================================================
+   NEW LAUNCHES PREMIUM PROMOTIONAL CARD STARTED
+================================================== */
+
+#new-launches .new-launches-promo {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    #061a38 0%,
+    #0b3264 55%,
+    #14509a 100%
+  ) !important;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 18px 42px rgba(5, 28, 65, 0.22) !important;
+}
+
+#new-launches .new-launches-promo::before {
+  content: "";
+  position: absolute;
+  right: -75px;
+  bottom: -95px;
+  width: 310px;
+  height: 310px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.025),
+    0 0 0 95px rgba(255, 255, 255, 0.018);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#new-launches .new-launches-promo-icon {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f6bd26;
+}
+
+#new-launches .new-launches-promo-tag {
+  color: #a9ccff;
+}
+
+#new-launches .new-launches-promo h3 {
+  color: #ffffff;
+}
+
+#new-launches .new-launches-promo h3 span {
+  color: #f6bd26;
+}
+
+#new-launches .new-launches-promo p {
+  color: #d4e2f4;
+}
+
+#new-launches .new-launches-promo-list li {
+  padding: 9px 12px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+}
+
+#new-launches .new-launches-promo-list .material-symbols-rounded {
+  color: #f6bd26;
+}
+
+#new-launches .new-launches-promo-button {
+  background: #f6bd26;
+  color: #071833;
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+#new-launches .new-launches-promo-button:hover {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================================
+   NEW LAUNCHES PREMIUM PROMOTIONAL CARD ENDED
 ================================================== */
 
 /* Above code are proper 25th OCT 2026 */
