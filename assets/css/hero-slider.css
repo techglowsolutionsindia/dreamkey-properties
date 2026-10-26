@@ -118,6 +118,12 @@
   transform: none !important;
 }
 
+@media (min-width: 1281px) {
+  #home .hero-slide .hero-content {
+    transform: translateY(-20px) !important;
+  }
+}
+
 /* ==================================================
    HERO BADGE
 ================================================== */
@@ -389,7 +395,7 @@
 #home .hero-search-container {
   position: absolute !important;
   right: 50% !important;
-  bottom: 30px !important;
+  bottom: 80px !important;
   left: auto !important;
   z-index: 15 !important;
   width: min(calc(100% - 48px), 1265px) !important;
@@ -997,7 +1003,7 @@
   #home .hero-trust-container {
     position: absolute !important;
     right: auto !important;
-    bottom: 135px !important;
+    bottom: 185px !important;
     left: max(24px, calc((100% - 1310px) / 2 + 24px)) !important;
     width: auto !important;
     margin: 0 !important;
@@ -1009,5 +1015,21 @@
     justify-content: flex-start !important;
   }
 }
+
+/* ==================================================
+   DESKTOP HERO SEARCH POSITION FIX STARTED
+================================================== */
+@media (min-width: 1281px) {
+  #home .hero-search-container {
+    bottom: 70px !important;
+  }
+
+  #home .hero-trust-container {
+    bottom: 185px !important;
+  }
+}
+/* ==================================================
+   DESKTOP HERO SEARCH POSITION FIX ENDED
+================================================== */
 
 /* Above code is code 6th Aug 2026 */

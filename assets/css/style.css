@@ -13609,4 +13609,66 @@ body.our-services-modal-open {
   align-self: flex-start !important;
 }
 
-/* Above code are proper 15th Aug 2026 */
+/* ==================================================
+   MOBILE NAVIGATION RESPONSIVE FIX STARTED
+================================================== */
+
+@media (max-width: 991px) {
+  .header .nav-toggle-btn {
+    display: grid;
+    flex-shrink: 0;
+  }
+
+  .header .navbar {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% - 4px);
+    right: 16px;
+    width: min(320px, calc(100vw - 32px));
+    padding: 14px;
+    display: grid;
+    background-color: var(--neutral-100);
+    border: 1px solid var(--neutral-90);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px) scale(0.97);
+    transform-origin: top right;
+    transition:
+      opacity 200ms ease,
+      visibility 200ms ease,
+      transform 200ms ease;
+    z-index: 4;
+  }
+
+  .header .navbar.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .header .navbar-list {
+    all: unset;
+    display: grid;
+    gap: 4px;
+  }
+
+  .header .navbar-link {
+    display: block;
+    padding: 12px 14px;
+    color: var(--neutral-30);
+    white-space: normal;
+  }
+
+  .header .navbar-cta {
+    margin-top: 10px;
+  }
+}
+
+/* ==================================================
+   MOBILE NAVIGATION RESPONSIVE FIX ENDED
+================================================== */
+
+/* Above code are proper 25th OCT 2026 */
