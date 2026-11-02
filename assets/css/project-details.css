@@ -19659,6 +19659,18 @@ section#floor-plans.sh-floor-section {
   color: #ffad20 !important;
 }
 
+@media (min-width: 992px) {
+  #contact .skyline-contact-heading > span {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.85em;
+  }
+
+  #contact .skyline-contact-heading > span > span {
+    display: inline;
+  }
+}
+
 /* ==========================================================
    DESCRIPTION
 ========================================================== */
